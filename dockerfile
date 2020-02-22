@@ -29,6 +29,8 @@ RUN mkdir boostinstall && \
 ENV BOOST_ROOT="/usr/local/include/boostinstall/boost_1_71_0"
 ENV BOOST_INCLUDEDIR="/usr/local/include/boostinstall/boost_1_71_0"
 ENV BOOST_LIBRAIRY="/usr/local/include/boostinstall/boost_1_71_0/stage/lib"
+ENV PATH=$PATH:"/usr/local/bin/igl601-lab1/gitus-StartingPoint/build"
+
 
 RUN apt remove --purge --auto-remove cmake && \
     cd download && \
@@ -47,11 +49,9 @@ RUN git clone https://gitlab.com/Odaz/igl601-lab1.git && \
     cd build && \
     cmake .. && \
     make && \
-    ./gitus
+    gitus
 
-# COPY gitexecute .
-
-# RUN cd gitexecute/.gitus
+RUN apt install nano
 
 CMD ["/bin/bash"]
 
