@@ -30,6 +30,7 @@ ENV BOOST_ROOT="/usr/local/include/boostinstall/boost_1_71_0"
 ENV BOOST_INCLUDEDIR="/usr/local/include/boostinstall/boost_1_71_0"
 ENV BOOST_LIBRAIRY="/usr/local/include/boostinstall/boost_1_71_0/stage/lib"
 ENV PATH=$PATH:"/usr/local/bin/igl601-lab1/gitus-StartingPoint/build"
+ENV PATH=$PATH:"/usr/local/bin/igl601-lab1/gitus-StartingPoint/build/tests"
 
 
 RUN apt remove --purge --auto-remove cmake && \
